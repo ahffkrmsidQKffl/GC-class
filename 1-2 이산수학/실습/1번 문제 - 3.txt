@@ -1,0 +1,2 @@
+UPDATE 구매정보 SET 주문회수=91 WHERE 회원번호=20220001;
+UPDATE 구매정보 SET 등급='VIP' WHERE 포인트 >= 50000;
