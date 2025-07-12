@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "230502 9주차-2 과제 Rectangle", "230502 9주차-2 과제 Rectangle\230502 9주차-2 과제 Rectangle.vcxproj", "{697693CC-408B-45AB-9235-C96E64009013}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{697693CC-408B-45AB-9235-C96E64009013}.Debug|x64.ActiveCfg = Debug|x64
+		{697693CC-408B-45AB-9235-C96E64009013}.Debug|x64.Build.0 = Debug|x64
+		{697693CC-408B-45AB-9235-C96E64009013}.Debug|x86.ActiveCfg = Debug|Win32
+		{697693CC-408B-45AB-9235-C96E64009013}.Debug|x86.Build.0 = Debug|Win32
+		{697693CC-408B-45AB-9235-C96E64009013}.Release|x64.ActiveCfg = Release|x64
+		{697693CC-408B-45AB-9235-C96E64009013}.Release|x64.Build.0 = Release|x64
+		{697693CC-408B-45AB-9235-C96E64009013}.Release|x86.ActiveCfg = Release|Win32
+		{697693CC-408B-45AB-9235-C96E64009013}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E807D8EB-F9BD-4AF8-ABC0-2FB4DFB0EE95}
+	EndGlobalSection
+EndGlobal

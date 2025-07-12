@@ -1,0 +1,3 @@
+﻿  main.cpp
+D:\2학년 1학기\C ++\KMH\codes\ch07\account_객체포인터배열\230515 11주차 과제 account\main.cpp(123,16): warning C4101: 'bal' :참조되지 않은 지역 변수입니다.
+  230515 11주차 과제 account.vcxproj -> D:\2학년 1학기\C ++\KMH\codes\ch07\account_객체포인터배열\x64\Debug\230515 11주차 과제 account.exe

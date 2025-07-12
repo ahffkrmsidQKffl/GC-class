@@ -1,0 +1,4 @@
+﻿  circle.cpp
+  main.cpp
+D:\2학년 1학기\C ++\KMH\codes\ch07\Circle_file_seperation\Circle\main.cpp(9,2): error C2059: 구문 오류: 'return'
+  코드를 생성하고 있습니다...
