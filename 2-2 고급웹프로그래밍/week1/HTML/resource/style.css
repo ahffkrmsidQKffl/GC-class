@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Song+Myung&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+
+body {
+  line-height: 2.8;
+  font-weight: bolder;
+  }
+
+header {
+  background-color : #F5FFFA ;
+  font-family : "Nanum Gothic", sans-serif;
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
+
+.container {
+  background-color: #fCFCf0;
+  font-family: "Song Myung", serif;
+  display: grid;
+  grid-template-columns: 150px 1fr 100px;
+  row-gap: 0px;
+  column-gap: 0px;
+}
+
+nav {
+  border-right: 1px solid red;
+  margin-left: 20px;
+}
+
+main {
+  font-size: 15px;
+  background-color: #efFCf0;
+  border-right: 1px solid red;
+  margin: 10px;
+}
+main:hover {
+  background-color: #ffff00;
+  /* color: white; */
+}
+
+article {
+  margin: 10px;
+  font-size: 15px;
+}
+
+footer {
+  font-family: "Nanum Pen Script", cursive;
+  text-align: center;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  margin: 10px;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  /* margin: 10px; */
+}
+
+a:hover {
+  background-color: #cd85f3;
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .container {
+    display: block;
+  }
+  nav, main, footer {
+    border: none;
+  }
+}
+
+table {
+  border: 1px dotted blue;
+  border-collapse: collapse;
+  width: 50%;
+}
+td {
+    border: 1px dotted blue;
+    padding: 10px;
+}
+tr:hover { background-color: #fffff0; }
+
+input[type="text"] {
+  border: 1px dotted orange;
+  border-radius: 2px;
+  width: 30%;
+}
+input[type="password"] {
+  border: 1px dotted orange;
+  border-radius: 2px;
+  width: 30%;
+}
+
+input[type="text"]:focus {
+    background-color: #ffff00;
+}
+
+input[type="password"]:focus { 
+  background-color: #ffff00; 
+}

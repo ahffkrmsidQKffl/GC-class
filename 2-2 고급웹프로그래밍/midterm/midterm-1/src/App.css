@@ -1,0 +1,68 @@
+
+/* 메뉴바 스타일 */
+.menubar {
+  background-color: orange;
+  display: flex;
+  justify-content: space-around;
+  padding: 3px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  margin: 0 15px;
+  position: relative;
+  color : white;
+  font-size: 30px;
+}
+
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.sub {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: orange;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  float : left;
+  display : none;
+}
+
+nav ul li:hover > ul {
+  display: flex; /* 서브메뉴를 가로로 정렬 */
+  flex-direction: column; /* 세로로 나열하도록 설정 */
+}
+
+#index {
+  font-size : 50px;
+  text-align: center;
+}
+
+
+footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: right;
+  background-color: white;
+  color: black;
+  font-size: 15px;
+}
+
+.sub li a:hover {
+  text-decoration: underline;
+}

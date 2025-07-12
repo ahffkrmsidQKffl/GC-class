@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Song+Myung&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+
+body {
+  font-family: "Nanum Pen Script";
+  background-color: lightgoldenrodyellow;
+  line-height: 1.5;
+  font-weight: bolder;
+  margin-left : 50px;
+  }
+header {
+  text-align: center;
+  font-size: 250px;
+  margin-bottom: 50px;
+}
+#index{
+  font-size: 150px;
+  margin-left : 500px; 
+}
+.container {
+  display: grid;
+  grid-template-columns: 450px 1fr;
+}
+nav {
+  font-family: "Nanum Pen Script";
+  margin-left: 20px;
+  font-size: 100px;
+}
+main{
+  font-family: "Nanum Pen Script";
+  margin-left: 20px;
+  background-color: lightgoldenrodyellow;
+  font-size: 70px;
+}
+footer {
+  text-align: center;
+  background-color: gray;
+  color: white;
+  font-size: 100px;
+}
+a:link, a:visited {
+  background-color:#eeeeee; 
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  width:450px;
+  font-size: 1.5em;
+}
+a:hover, a:active { 
+  background-color: #FF4500; 
+  color:white ;
+}
+
+button {
+  font-family: "Nanum Pen Script";
+  background-color: blue;
+  color: white ;
+  padding: 10px 20px;
+  margin: 20px; 
+  font-size: 2em;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+button:hover {
+  background-color: orange;
+  color: white;
+}

@@ -1,0 +1,63 @@
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+#index{
+  margin-left:50px ;
+  margin-right:50px ;
+  font-family : 'Jeju Gothic', sans-serif;
+  line-height: 1.5;
+  font-weight: bolder;
+}
+header {
+  font-size: 50px;
+  height: 150px;
+  padding-top: 80px;
+  background: lightblue;
+  text-align: center;
+}
+#container {
+  display: flex;
+}
+#nav{
+  flex: 1;
+  height: 700px;
+  background-color: lightgreen;
+  font-size:30px ;
+}
+#main{
+  flex: 4;
+  background-color: lightyellow;
+  font-size: 20px;
+  margin-left: 20px;
+}
+.link1{
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+}
+.link1:hover {
+  background-color: orange;
+  color: white; 
+}
+.link2 {
+  text-align : center ;
+  padding-top : 5px ;
+  padding-bottom : 10px;
+  margin :10px ;
+  color : white ;
+  background-color: blue;
+  text-decoration : none ;
+  font-size : 1.8rem ;
+}
+.link2:hover {
+  background : orange ;
+}
+.link2:active {
+  background : white;
+  color : blue;
+}
+footer {
+text-align: center;
+background-color: gray;
+color: white;
+font-size: 30px;
+height: 100px;
+}

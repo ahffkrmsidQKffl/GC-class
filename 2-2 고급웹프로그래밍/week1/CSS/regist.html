@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Regist Page</title>
+    <link rel="stylesheet" href="./resource/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1><a href="index.html">WEB Programming</a></h1>
+    </header>
+    <div class="container">
+      <nav>
+        <a href="html.html">HTML</a>
+        <a href="css.html">CSS</a>
+        <a href="js.html">JavaScript</a>
+        <a href="react.html">ReactJs</a>
+        <a href="nodejs.html">NodeJs</a>
+      </nav>
+      <main>
+        <h2 align="center">회 원 가 입</h2>
+        <form name="member">
+          <table border="1" align="center">
+            <tr>
+              <td>이름</td>
+              <td>
+                <input type="text" size="5" />
+              </td>
+            </tr>
+            <tr>
+              <td width="30%">아이디</td>
+              <td width="70%">
+                <input type="text" name="id" size="8" />
+              </td>
+            </tr>
+            <tr>
+              <td>비밀번호</td>
+              <td>
+                <input type="password" name="pw" size="8" />
+              </td>
+            </tr>
+            <tr>
+              <td>전화번호</td>
+              <td>
+                <select name="phon1">
+                  <option>010</option>
+                  <option>02</option>
+                  <option>031</option>
+                  <option>051</option>
+                </select>
+                -
+                <input type="text" name="phone2" size="2" />
+                -
+                <input type="text" name="phone3" size="2" />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <input type="radio" name="gender" value="m" checked />남자
+                <input type="radio" name="gender" value="f" />여자
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center">
+                <button onclick="check()">가입하기</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </main>
+
+      <article>
+        <a href="regist.html">회원 가입 </a>
+        <a href="login.html">로그인 </a>
+      </article>
+    </div>
+
+    <footer>
+      <i>
+        Copyright 2023. 지은이 all rights reserved.<br />
+        연락처 : 010-8906-3946
+      </i>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+   <body>
+      <div>
+       <p id="text" style="background-color: blue;
+       color: white; width: 350px; height: 50px;
+       text-align: right; font-size: 30px;"></p>
+    
+       <button Onclick="addNumber()">증가</button>
+       <button Onclick="subNumber()">감소</button>
+       <button Onclick="greeting()">만남</button>
+       <div onmouseover="over()" onmouseout="out()"
+       style="background-color: yellow; display: inline-block">
+       [마우스 over/마우스 out]
+       </div>
+       <div>
+        <select id="sel" OnChange="change()">
+        <option value="">바나나</option>
+        <option value="사과">사과</option>
+        <option value="오랜지">오랜지</option>
+        <option value="딸기">딸기</option>
+        <option value="토마토">토마토</option>
+        </select>
+       </div>
+         <div>
+        <input id="key" onkeydown="keydown()" />
+       </div>
+      </div>
+     </body>
+    
+       <script>
+           var count = 0;
+           function addNumber() {
+            count = count + 1;
+            document.getElementById("text").innerHTML = count;
+           }
+           function subNumber() {
+            count = count - 1;
+            document.getElementById("text").innerHTML = count;
+           }
+           function greeting() {
+            document.getElementById("text").innerHTML = "안녕하세요. 반갑습니다.";
+           }
+           function over() {
+            document.getElementById("text").innerHTML = "마우스 over";
+           }
+           function out() {
+            document.getElementById("text").innerHTML = "마우스 out";
+           }
+           function change() {
+            var values = document.getElementById("sel").value;
+            document.getElementById("text").innerHTML = values;
+           }
+           function keydown() {
+            var values = document.getElementById("key").value;
+            document.getElementById("text").innerHTML = values;
+           }
+          </script>
+        

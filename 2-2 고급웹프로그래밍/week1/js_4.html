@@ -1,0 +1,26 @@
+<body>
+  <h3>클래스 사용</h3>
+  <script>
+    class Student {
+      // 클래스 예 1
+      constructor(name, number, majer, grade) {
+        this.name = name; // 멤버 변수
+        this.number = number; // 멤버변수
+        this.majer = majer; // 멤버 변수
+        this.grade = grade;
+      }
+      study() {
+        //  멤버 메서드
+        console.log(`${this.name}열공중입니다....`); //멤버 변수 값이 출력이 됨
+        document.write(`${this.name}열공중입니다....`);
+      }
+      play() {
+        console.log(`${this.name}운동중입니다....`);
+        document.write(`${this.name}운동중입니다....`);
+      }
+    }
+    var kcb = new Student("김창복", 202320, "컴퓨터공학과", 4.0);
+    kcb.study();
+    kcb.play();
+  </script>
+</body>

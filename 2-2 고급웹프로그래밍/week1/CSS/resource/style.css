@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Song+Myung&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+
+body {
+  line-height: 1.5;
+  font-weight: bolder;
+  margin-left : 100px;
+  margin-right : 100px;
+  background-color: lightblue;
+  }
+
+header {
+  text-align: center;
+  border-bottom: 3px solid gray;
+}
+
+.container {
+  font-family: "Song Myung";
+  display: grid;
+  grid-template-columns: 150px 1fr 100px;
+}
+
+nav {
+  border-right: 3px solid gray;
+  margin-left: 20px;
+}
+
+main {
+  font-size: 20px;
+  border-right: 3px solid gray;
+  margin-left: 20px;
+}
+
+article {
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+footer {
+  font-family: "Nanum Pen Script";
+  text-align: center;
+  border-top: 3px solid gray;
+  border-bottom: 3px solid gray;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: orange;
+  color: white;
+}
+
+table {
+  border: 3px dotted blue;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td {
+    border: 3px dotted blue;
+    padding: 10px;
+}
+
+input[type="text"] {
+  border-radius: 2px;
+  background-color: gray;
+}
+
+button {
+  background-color: blue;
+  color:white ;
+}

@@ -1,0 +1,17 @@
+body {
+   background: lightgray;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bolder;
+  }
+  .booklist {
+   width: 600px;
+   margin: 20px;
+  }
+  .book {
+   background: #fffff0;
+   margin: 10px;
+   padding-left: 20px; 
+   border-radius: 1rem;
+   line-height: 1.5;
+  }
+  

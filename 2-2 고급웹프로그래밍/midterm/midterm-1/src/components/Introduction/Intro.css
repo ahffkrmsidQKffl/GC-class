@@ -1,0 +1,31 @@
+.introduction-container {
+    max-width: 800px;
+    margin: 30px auto;
+    border: 3px solid orange;
+    border-radius: 10px;
+    background-color: white;
+    
+  }
+  
+  .introduction-container h3 {
+    color: white;
+    font-size: 30px;
+  }
+  
+  .introduction-container p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+    padding : 15px;
+  }
+
+  .introduction-container2 {
+    background-color: orange;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .introduction-container h4 {
+    color: blue;
+    font-size: 30px;
+  }
+  

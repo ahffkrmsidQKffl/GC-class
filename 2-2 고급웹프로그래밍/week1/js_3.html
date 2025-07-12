@@ -1,0 +1,23 @@
+<body>
+  <h3>값으로서의 함수</h3>
+  <script>
+    // function sqr(x) {
+    //   // 함수 정의
+    //   return x * x;
+    // }
+
+    const sqr = function sqr(x) {
+      // 함수 정의
+      return x * x;
+    };
+
+    const sqrNum = sqr; // 변수에 함수 할당.
+
+    document.write(sqr(4) + "<br>"); // 함수 sqr을 호출함.
+    document.write(sqrNum(4) + "<br>"); // 변수 sqrNum를 함수처럼 호출함.
+    document.write(sqr + "<br>");
+    document.write(sqrNum + "<br>");
+    document.write(typeof sqr + "<br>");
+    document.write(typeof sqrNum + "<br>");
+  </script>
+</body>

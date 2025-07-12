@@ -1,0 +1,49 @@
+<!-- <head>
+        <script>
+         function myHandler1() {
+          alert("myHandler1");
+         }
+
+         function myHandler2() {
+          alert("myHandler2");
+         }
+
+        </script>
+       </head>
+
+       <body>
+        <input type="button" onClick="alert('Hello world');" value="button" />
+        <button onClick="myHandler1(); myHandler2();">Click me</button>
+       </body> -->
+
+
+
+       <!-- <input type="button" id="target" value="button" />
+
+       <script>
+         var btn = document.getElementById("target");
+       
+         btn.addEventListener("click", function (event) {
+           alert("Hello world, " + event.target.value);
+         });
+       </script> -->
+       
+
+<body>
+      <p>클릭하세요. 클릭한 곳의 좌표가 표시됩니다.</p>
+      <em class="message"></em>
+
+      <script>
+       function showCoords(e) {  // event object
+        const msg = document.querySelector(".message");
+        msg.innerHTML =
+         "clientX value: " +
+         e.clientX +
+         "<br>" +
+         "clientY value: " +
+         e.clientY;
+       }
+           // 전체 화면 클릭 이벤트
+       addEventListener("click", showCoords); 
+      </script>
+     </body>
