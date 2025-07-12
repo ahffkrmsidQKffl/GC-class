@@ -1,0 +1,9 @@
+# Visual Studio
+*.suo
+*.user
+*.userosscache
+*.ilk
+*.obj
+*.exe
+Debug/
+Release/
