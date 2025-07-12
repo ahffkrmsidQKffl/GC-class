@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>document.getElementsByTagName()</title>
+<script>
+   var button = document.getElementById("myButton");
+   button.addEventListener("click", function() {alert("one")});
+   button.addEventListener("click", function() {alert("two")});
+   button.addEventListener("click", function() {alert("three")});
+</script>
+</head>
+<body>
+    <button id="myButton">click</button>
+
+</body>
+</html>

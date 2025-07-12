@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>visibility 프로퍼티</title>
+<style>
+    span {
+        visibility : hidden;
+        color : blue;
+    }
+    </style>
+<script> // 얘는 대체 왜 스타일 태그가 아닌 script로 hidden을 지정할 수가 없지?
+    let spanArray = document.getElementsByTagName("span"); 
+    // spanArray[0].style.visibility = "hidden";
+    // spanArray[1].style.visibility = "hidden";
+    // spanArray[2].style.visibility = "hidden";
+
+    // for(let i=0; i<spanArray.length; i++) {
+	// 	if(spanArray[i].style.visibility == "hidden")
+    //         spanArray[i].style.visibility = "visible";
+	// 	else
+    //         spanArray[i].style.visibility = "hidden";		
+	// }
+    function showHide() {
+        for(let i=0; i<spanArray.length; i++) {
+		if(window.getComputedStyle(spanArray[i]).getPropertyValue("visibility") == "hidden")
+            spanArray[i].style.visibility = "visible";
+		else
+            spanArray[i].style.visibility = "hidden";		
+	}
+}
+//     function showHide() {
+//         for(let i=0; i<spanArray.length; i++) {
+// 		if(spanArray[i].style.visibility == "hidden")
+//             spanArray[i].style.visibility = "visible";
+// 		else
+//             spanArray[i].style.visibility = "hidden";		
+// 	}
+// }
+</script>
+</head>
+<body>
+<h3>다음 빈 곳에 숨은 단어?</h3>
+<button onclick="showHide()">show/hide</button>
+<hr>
+<ul>
+<li>I (<span>love</span>) you.
+<li>CSS is Cascading (<span>Style</span>) Sheet.
+<li>응답하라 (<span>1988</span>).
+</ul>
+</body>
+</html>

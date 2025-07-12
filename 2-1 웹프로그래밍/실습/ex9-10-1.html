@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>익명 함수로 이벤트 리스너 작성</title>
+<style>
+    #dl {
+        width : 50px;
+        height : 50px;
+        background-color: chartreuse;
+        position : relative;
+        top : 0px;
+        left: 0px;
+        margin : 10px;
+    }
+    #container {
+        position : relative;
+        width : 500px;
+        height : 500px;
+    }
+</style>
+<script>
+let p;
+let leftCnt = 0;
+function init() {
+    let leftBtn = document.getElementById("left");
+    let rightBtn = document.getElementById("right");
+    leftBtn.addEventListener("click", left);
+    rightBtn.addEventListener("click", right);
+}
+
+function right(a) {
+    let dl = document.getElementById("dl");
+    dl.style.left = (leftCnt+1)*50+"px";
+    leftCnt+=1;
+}
+
+function left(e) {
+    let dl = document.getElementById("dl");
+    if (leftCnt > 0) {
+        dl.style.left = (leftCnt-1)*50+"px";
+        leftCnt-=1;
+    }
+}
+</script>
+</head>
+<body onload="init()">
+<h3> 이벤트 리스너 작성</h3>
+<hr>
+
+<button id="lefts">left</button>
+<button id="right">right</button>
+<div id="container">
+    <div id="dl"></div>
+</div>
+</body>
+</html>

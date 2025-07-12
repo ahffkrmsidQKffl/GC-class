@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Auto</title>
+    </head>
+    <script> 
+    function Auto (num, kind, owner) {
+        this.num = num;
+        this.kind =kind;
+        this.owner =owner;
+
+        this.getNum = function () {return this.num;}
+        this.getKind = function () {return this.kind;}
+        this.getOwner = function () {return this.owner;}
+
+    }
+    </script>
+    <body>
+    <h3>Auto</h3>
+    <hr>
+    <script>
+    let Autoauto = new Auto("123", "kia", "me");
+
+    document.write("getNum: ");
+    document.write(Autoauto.getNum() + "<br>");
+    document.write("getKind: ");
+    document.write(Autoauto.getKind() + "<br>");
+    document.write("getOwner: ");
+    document.write(Autoauto.getOwner() + "<br>");
+
+
+    </script>
+    </body>
+    </html>

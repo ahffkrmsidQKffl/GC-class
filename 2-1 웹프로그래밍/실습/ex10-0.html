@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>윈도우 열기</title>
+<script>
+let myFirstWin //새로 연 윈도우를 받을 변수 선언
+
+function winOpen(url) {
+    myFirstWin=window.open(url, 'myWin', 'top=50, left=50, width=500, height=400') //()안에 url 넣으면 빈 페이지 열리지 않고 해당 url이 바로 열림, 세번째 parameter 다 px
+}
+function winClose() {
+    myFirstWin.close() //window.close()금 현재 윈도우가 닫힘
+}
+
+</script>
+</head>
+<body>
+<h3>window.open()으로 윈도우 열기</h3>
+<hr>
+<button onclick="winOpen()">새 윈도우 열기</button> <!--"window.open()"으로 써도 상관 x-->
+<button onclick="winOpen('https://www.naver.com/')">네이버 열기</button>
+<button onclick="winOpen('https://www.google.com/')">구글 열기</button>
+<button onclick="winOpen('https://www.gachon.ac.kr/')"> 가천대 열기</button>
+<button onclick="winClose()">윈도우 닫기</button>
+
+</body>
+</html

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"><title>문서의 동적 구성</title>
+<script>
+gV = 0;
+gV1 = 0;
+gv2= 0;
+function createDIV() {
+// 1. 태그 객체를 생성하는 단계
+gV++;
+let newDIV = document.createElement("div"); // div 태그 객체를 만들어서 newDIV에 저장됨, 아직 눈에 보이진 않음
+newDIV.innerHTML = "생성 태그" + gV;
+newDIV.style.border = "solid 4px gray";
+newDIV.style.textAlign = "center";
+newDIV.style.lineHeight = "50px"
+newDIV.style.borderRadius = "20px";
+newDIV.style.backgroundColor = "white";
+newDIV.style.color = "black";
+newDIV.style.width = "100px";
+newDIV.style.height = "50px";
+newDIV.style.margin = "10px";
+
+//이 위의 것을 추가할 위치의 부모 태그를 받아와야 합니다
+// 2. 추가할 위치의 부모 객체를 불러오는 단계
+let prt = document.getElementById("parent");
+
+// 3. 부모 객체의 자식으로 추가하는 단계
+prt.appendChild(newDIV);
+}
+
+function deleteDIV() {
+gV--;
+// 1. 삭제할 태그를 객체로 불러와야 합니다
+let tg = document.getElementsByTagName("div");
+
+// 2. 삭제할 태그의 부모 객체를 불러오는 단계
+let pt = tg[tg.length-1].parentElement;
+
+// 3. 부모 객체의 자식을 삭제함 (removeChild)
+pt.removeChild(tg[tg.length-1]);
+
+}
+
+function createSpan() {
+// 1. 태그 객체를 생성하는 단계
+gV1++;
+let newDIV = document.createElement("span"); // div 태그 객체를 만들어서 newDIV에 저장됨, 아직 눈에 보이진 않음
+newDIV.innerHTML = "스팬 태그" + gV1;
+newDIV.style.display = "block";
+newDIV.style.border = "solid 4px gray";
+newDIV.style.textAlign = "center";
+newDIV.style.lineHeight = "50px"
+newDIV.style.borderRadius = "20px";
+newDIV.style.backgroundColor = "white";
+newDIV.style.color = "black";
+newDIV.style.width = "100px";
+newDIV.style.height = "50px";
+newDIV.style.margin = "10px";
+
+// 2. 추가할 위치의 부모 객체를 불러오는 단계
+let prt = document.getElementById("parent");
+
+// 3. 부모 객체의 자식으로 추가하는 단계
+prt.appendChild(newDIV);
+}
+
+function deleteSpan() {
+gV1--;
+// 1. 삭제할 태그를 객체로 불러와야 합니다
+let tg = document.getElementsByTagName("span");
+
+// 2. 삭제할 태그의 부모 객체를 불러오는 단계
+let pt = tg[tg.length-1].parentElement;
+
+// 3. 부모 객체의 자식을 삭제함 (removeChild)
+pt.removeChild(tg[tg.length-1]);
+
+}
+
+function createP() {
+// 1. 태그 객체를 생성하는 단계
+gV2++;
+let newDIV = document.createElement("p"); // div 태그 객체를 만들어서 newDIV에 저장됨, 아직 눈에 보이진 않음
+newDIV.innerHTML = "p 태그" + gV2;
+newDIV.style.border = "solid 4px gray";
+newDIV.style.textAlign = "center";
+newDIV.style.lineHeight = "50px"
+newDIV.style.borderRadius = "20px";
+newDIV.style.backgroundColor = "white";
+newDIV.style.color = "black";
+newDIV.style.width = "100px";
+newDIV.style.height = "50px";
+newDIV.style.margin = "10px";
+
+// 2. 추가할 위치의 부모 객체를 불러오는 단계
+let prt = document.getElementById("parent");
+
+// 3. 부모 객체의 자식으로 추가하는 단계
+prt.appendChild(newDIV);
+}
+
+function deleteP() {
+gV2--;
+// 1. 삭제할 태그를 객체로 불러와야 합니다
+let tg = document.getElementsByTagName("p");
+
+// 2. 삭제할 태그의 부모 객체를 불러오는 단계
+let pt = tg[tg.length-1].parentElement;
+
+// 3. 부모 객체의 자식을 삭제함 (removeChild)
+pt.removeChild(tg[tg.length-1]);
+
+}
+</script>
+</head>
+<body id="parent">
+<button onclick = "createDIV()">div 생성</button>&nbsp;&nbsp;&nbsp;
+<button onclick = "createSpan()">span 생성</button>&nbsp;&nbsp;&nbsp;
+<button onclick = "createP()">p 생성</button>&nbsp;&nbsp;&nbsp;
+<button onclick = "deleteDIV()">div 삭제</button>&nbsp;&nbsp;&nbsp;
+<button onclick = "deleteSpan()">span 삭제</button>&nbsp;&nbsp;&nbsp;
+<button onclick = "deleteP()">p 삭제</button>&nbsp;&nbsp;&nbsp;
+
+</body></html>

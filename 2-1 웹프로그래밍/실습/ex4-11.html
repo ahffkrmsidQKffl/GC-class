@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset-"utf-8">
+    <title>텍스트 꾸미기</title>
+  <style>
+    h3{
+        color : blue;
+        text-align: center; /* 가운데 정렬 */
+    }
+    span {
+        text-decoration: line-through; /* 중간 줄 */
+    }
+    strong {
+        text-decoration: overline; /* 윗 줄 */
+    }
+    .p1 {
+        background-color: yellow; /* 3글자 들여쓰기 */
+        text-indent: 3em;
+        text-align: justify; /* 양쪽 정렬 */
+    }
+    .p2 {
+        text-indent: 1em;
+        text-align: left;
+    }
+    p:nth-child(even) {  /* 두번째 p 태그를 의미 (my: 5개의 자식 태그 중 짝수번째인 놈이 p태그라면) */
+        font-size: 30px;
+    } 
+  </style>
+</head>
+<body>
+    <h3>텍스트 꾸미기</h3>
+    <hr>
+<p class = "p1">HTML의 태그만으로 기존의 워드 프로세서와 가티 들여쓰기, 정렬, 공백, 간격 등과 세밀한 <span>텍스트 제어</span>를 할 수 없다.</p>
+<p class = "p2">그러나 <strong>스타일 시트</strong>는 이를 가능하게 한다. 들여쓰기, 정렬에 대해서 알아본다.</p>
+<a href="http://naver.com"
+style ="text-decoration: none;">
+밑줄이 없는 네이버 링크</a>
+</body>
+</html>

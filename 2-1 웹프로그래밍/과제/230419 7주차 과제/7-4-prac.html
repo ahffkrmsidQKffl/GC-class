@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>방문 시간에 따라 변하는 배경색</title>
+</head>
+<body>
+<h3>일요일은 pink, 다른 요일은 gold 배경</h3>
+<hr>
+<script>
+let current = new Date(); // 현재 시간을 가진 Date 객체 생성
+let day;
+if (current.getDay()==0) {
+    day = "일"
+}
+else if (current.getDay()==1) {
+    day = "월"
+}
+else if (current.getDay()==2) {
+    day = "화"
+}
+else if (current.getDay()==3) {
+    day = "수"
+}
+else if (current.getDay()==4) {
+    day = "목"
+}
+else if (current.getDay()==5) {
+    day = "금"
+}
+else if (current.getDay()==6) {
+    day = "토"
+}
+if(current.getDay() == 0) {
+document.body.style.backgroundColor = "pink";
+}
+else {
+document.body.style.backgroundColor = "gold";
+}
+document.write("오늘 : ");
+document.write(current.getDate(), "일,");
+document.write(day, "요일");
+</script>
+</body>
+</html>

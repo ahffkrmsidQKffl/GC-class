@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>눈 내리기</title>
+<style>
+body {
+    background-image: url("media/snow.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}    
+div {
+    position : absolute;
+}
+</style>
+</head>
+<body>
+    <script>
+        let parent = document.getElementsByTagName("body");
+        for (let i=0; i<30; i++) {
+            let snowflake = document.createElement("div");
+            snowflake.innerHTML = "<img src='media/snowflake.jpg'>";
+            parent[0].appendChild(snowflake);
+        }
+
+      
+        let snowflake = document.getElementsByTagName("div");
+        for (let i=0; i<30; i++) {
+            snowflake[i].style.left = Math.random() * window.innerWidth + "px";
+            snowflake[i].style.top = Math.random() * window.innerHeight + "px";
+        } 
+        
+
+        function snow() {
+            let timerID = setInterval("fall()", 500);
+        }
+
+        function fall() {
+            let snowflake = document.getElementsByTagName("div");
+            for (let i = 0; i < 30; i++) {
+                let currentTop = parseInt(snowflake[i].style.top);
+                if (currentTop >= window.innerHeight) {
+                snowflake[i].style.top = "0px";
+                } 
+                else {
+                snowflake[i].style.top = (currentTop + 10) + "px";
+                }
+            }
+        }
+        window.onload = snow;
+    </script>
+</body>
+</html>
+
+
+<!-- let p;
+let leftCnt = 0;
+function init() {
+    let leftBtn = document.getElementById("left");
+    let rightBtn = document.getElementById("right");
+    leftBtn.addEventListener("click", left);
+    rightBtn.addEventListener("click", right);
+}
+
+function right(a) {
+    let dl = document.getElementById("dl");
+    dl.style.left = (leftCnt+1)*50+"px";
+    leftCnt+=1;
+}
+
+function left(e) {
+    let dl = document.getElementById("dl");
+    if (leftCnt > 0) {
+        dl.style.left = (leftCnt-1)*50+"px";
+        leftCnt-=1;
+    }
+} -->
+
+<!-- let snowflake1 = document.createElement("div");
+        snowflake1.style.left = 10+"px"
+        snowflake1.innerHTML = "<img src='media/snowflake.jpg'>";
+        let parent = document.getElementsByTagName("body");
+        parent[0].appendChild(snowflake1);
+    
+        let snowflake2 = document.createElement("div");
+        snowflake2.style.left = 20+"px"
+        snowflake2.innerHTML = "<img src='media/snowflake.jpg'>";
+        parent[0].appendChild(snowflake2);
+
+        let snowflake3 = document.createElement("div");
+        snowflake3.style.left = 30+"px"
+        snowflake3.innerHTML = "<img src='media/snowflake.jpg'>";
+        parent[0].appendChild(snowflake3);
+
+        let snowflake4 = document.createElement("div");
+        snowflake4.style.left = 40+"px"
+        snowflake4.innerHTML = "<img src='media/snowflake.jpg'>";
+        parent[0].appendChild(snowflake4);
+
+        let snowflake5 = document.createElement("div");
+        snowflake5.style.left = 50+"px"
+        snowflake5.innerHTML = "<img src='media/snowflake.jpg'>";
+        parent[0].appendChild(snowflake5);
+
+        let snowflake6 = document.createElement("div");
+        snowflake6.style.left = 60+"px"
+        snowflake6.innerHTML = "<img src='media/snowflake.jpg'>";
+        parent[0].appendChild(snowflake6);
+        
+        let snowflake7 = document.createElement("div");
+        snowflake7.style.left = 70+"px"
+        snowflake7.innerHTML = "<img src='media/snowflake.jpg'>";
+        parent[0].appendChild(snowflake7);
+
+        let snowflake8 = document.createElement("div");
+        snowflake8.style.left = 80+"px"
+        snowflake8.innerHTML = "<img src='media/snowflake.jpg'>";
+        parent[0].appendChild(snowflake8);
+
+        let snowflake9 = document.createElement("div");
+        snowflake9.style.left = 90+"px"
+        snowflake9.innerHTML = "<img src='media/snowflake.jpg'>";
+        parent[0].appendChild(snowflake9);
+
+        let snowflake10 = document.createElement("div");
+        snowflake10.style.left = 100+"px"
+        snowflake10.innerHTML = "<img src='media/snowflake.jpg'>";
+        parent[0].appendChild(snowflake10);
+
+        let snowflake11 = document.createElement("div");
+        snowflake11.style.left = 110+"px"
+        snowflake11.innerHTML = "<img src='media/snowflake.jpg'>";
+        parent[0].appendChild(snowflake11);
+    
+        let snowflake12 = document.createElement("div");
+        snowflake12.style.left = 120+"px"
+        snowflake12.innerHTML = "<img src='media/snowflake.jpg'>";
+        parent[0].appendChild(snowflake12);
+
+        let snowflake13 = document.createElement("div");
+        snowflake13.style.left = 130+"px"
+        snowflake13.innerHTML = "<img src='media/snowflake.jpg'>";
+        parent[0].appendChild(snowflake13);
+
+        let snowflake14 = document.createElement("div");
+        snowflake14.style.left = 140+"px"
+        snowflake14.innerHTML = "<img src='media/snowflake.jpg'>";
+        parent[0].appendChild(snowflake14);
+
+        let snowflake15 = document.createElement("div");
+        snowflake15.style.left = 150+"px"
+        snowflake15.innerHTML = "<img src='media/snowflake.jpg'>";
+        parent[0].appendChild(snowflake15); -->

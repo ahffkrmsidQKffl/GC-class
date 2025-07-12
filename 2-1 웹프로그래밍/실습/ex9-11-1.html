@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+<title>마우스 이벤트 객체의 프로퍼티</title>
+<style>
+#dl {
+    width : 50px;
+    height : 50px;
+    background-color: greenyellow;
+    border-radius: 50px;
+    position: absolute;
+    z-index:9999;
+    top : 0px;
+    left : 0px;
+    margin : 10px;
+    transform: translate(-50%, -50%); /*마우스 포인터 중앙에 오게 하기 위함*/
+}
+
+</style>
+<script>
+     function init() {
+        document.onmousemove=move; //document에도 이벤트 객체 사용이 가능타(전역 이벤트라고 부름)
+    }
+
+    function move(a) {
+        let dl = document.getElementById("dl");
+        dl.style.left = a.clientX+"px";
+        dl.style.top = a.clientY+"px";
+    }
+</script>
+</head>
+<body onload="init()">
+    <div id="dl"></div>
+
+</body></html>

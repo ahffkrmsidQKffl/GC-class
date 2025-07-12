@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+<title>HTML DOM 트리</title></head>
+<body>
+<h3>DOM 객체 p의 프로퍼티, 스타일, 이벤트 리스너</h3>
+<hr>
+<p id="firstP" 
+style="color:blue; background:yellow" 
+onclick="this.style.color='teal'">
+이것은 <span style="color:red">문장입니다.
+</span>
+</p>
+<div id="secDiv">
+    이것은 <span>DIV 태그입니다.</span>
+</div>
+<div class="test">
+    class 이름으로 읽을 거예요.
+</div>
+<p class="test">
+    class 이름으로 읽을 거예요.
+</p>
+<div>
+    마지막 div예요.
+</div>
+<script>
+// let p = document.getElementById("firstP");
+// let text = "p.id = " + p.id + "\n";
+// text += "p.tagName = " + p.tagName + "\n";
+// text += "p.innerHTML = " + p.innerHTML + "\n";
+// text += "p.style.color = " + p.style.color + "\n";
+// text += "p.onclick = " + p.onclick + "\n";
+// text += "p.childElementCount = " + p.childElementCount + "\n";
+// text += "너비 = " + p.offsetWidth + "\n";
+// text += "높이 = " + p.offsetHeight + "\n";
+// alert(text);
+
+// let divobj = document.getElementById("secDiv");
+// let text = "divobj.id = " + divobj.id + "\n";
+// text += "divobj.tagName = " + divobj.tagName + "\n";
+// text += "divobj.innerHTML = " + divobj.innerHTML + "\n";
+// text += "divobj.childElementCount = " + divobj.childElementCount + "\n";
+// text += "divobj.nextElementsibling = " + divobj.nextElementsibling + "\n";
+// text += "divobj.previousElementSibling = " + divobj.previousElementSibling + "\n";
+// text += "너비 = " + divobj.offsetWidth + "\n";
+// text += "높이 = " + divobj.offsetHeight + "\n";
+// alert(text);
+
+// let tn = document.getElementsByTagName("div");
+// numTag = tn.length;
+// let content = tn[0].innerHTML;
+// let text = "numTag = " + numTag + "\n";
+// text+="content = " + content + "\n";
+// alert(text);
+
+let cn = document.getElementsByClassName("test");
+numTag = cn.length;
+let content = cn[0].innerHTML;
+let text = "numTag = " + numTag + "\n";
+text+="content = " + content + "\n";
+alert(text);
+
+</script>
+</body>
+</html>

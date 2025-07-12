@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>5번</title>
+<script>
+function pr(msg, arr) { document.write(msg + arr.toString() + "<br>"); }
+</script>
+</head>
+<body>
+<h3>5번</h3>
+<hr>
+<script>
+var names = new Array("wonsun", "jaemoonlee", "kitae", "gracehwang");
+
+pr("이름: ", names);
+document.write("<hr>");
+var longest = names[0];
+for (var i=0; i<names.length; i++) {
+    if (names[i].length>longest.length) {
+        longest = names[i];
+    }
+}
+document.write("가장 긴 이름: "+longest);
+document.write("<hr>");
+var first = names[0];
+for (var i=0; i<names.length; i++) {
+    if (names[i]<first) {
+        first = names[i];
+    }
+}
+document.write("가장 먼저 나오는 이름: "+first);
+document.write("<hr>");
+names.sort(); 
+pr("증가순 이름 : ", names);
+</script></body></html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>선의색과굵기</title></head>
+<body>
+<h3>선의색과굵기</h3>
+<hr>
+<canvas id="myCanvas" style="background-color:aliceblue" width="1000" height="1000"></canvas>
+<script>
+let canvas = document.getElementById("myCanvas");
+let context = canvas.getContext("2d");
+
+// 1 픽셀의blue 직선그리기
+context.beginPath();
+context.moveTo(20, 20);
+context.lineTo(150, 50);
+context.strokeStyle= "blue";
+context.stroke();
+
+// 10 픽셀yellowgreen사각형그리기
+context.beginPath();
+context.fillStyle = "black";
+context.rect(20, 80, 120, 50);
+context.fill();
+context.lineWidth= 10; // 선굵기10픽셀
+context.strokeStyle= "yellowgreen"; // 선색
+context.stroke();
+
+// 20 픽셀의violet 색원호그리기
+context.beginPath();
+context.fillStyle = "blue";
+context.moveTo(80, 220); //이거 안 쓰면 그냥 대각선으로 이어버림 closePath가
+context.arc(80, 220, 50, 0, 1.5*Math.PI, false);
+context.closePath();
+context.fill();
+context.lineWidth= 20; // 선굵기20픽셀
+context.strokeStyle= "violet"; // 선색
+context.stroke();
+
+//추가 응용 실습
+context.beginPath();
+context.arc(300, 300, 50, 0, 2*Math.PI, false);
+context.moveTo(300, 350);
+context.lineTo(300, 600);
+context.moveTo(300, 400);
+context.lineTo(150, 500);
+context.moveTo(300, 400);
+context.lineTo(450, 500);
+context.moveTo(300, 600);
+context.lineTo(450, 700);
+context.moveTo(300, 600);
+context.lineTo(150, 700);
+context.lineWidth= 5; // 선굵기20픽셀
+context.strokeStyle= "black";
+context.stroke();
+</script>
+</body>
+</html>

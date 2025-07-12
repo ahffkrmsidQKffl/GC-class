@@ -1,0 +1,72 @@
+<html>
+    <head>
+    <meta charset-"utf-8">
+    <title>설문조사</title>
+    <style>
+        header {
+            background-color: yellow;
+            width: 100%; height: 25%;
+        }
+        section  {
+            background-color: pink;
+        }
+        footer {
+            background-color: aqua;
+            width: 100%; height: 20%;
+        }
+    </style>
+    </head>
+<body>
+    <header>
+    <h3>설문지</h3>
+    ChatGPT의 전망에 대한 설문조사 부탁드립니다.<br>
+</header>
+    <hr>
+    <section>
+    <article>
+    <form>
+        성별<br><br>
+        <input type="radio" name="china" value="1">
+        여자
+        <input type="radio" name="china" value="3">
+        남자<br><br>
+    </form>
+    </article>
+
+    <article>
+    <form>
+        학년<br><br>
+        <input type="radio" name="china" value="1">
+        1학년
+        <input type="radio" name="china" value="2" checked>
+        2학년
+        <input type="radio" name="china" value="3">
+        3학년
+        <input type="radio" name="china" value="3">
+        4학년<br><br>
+    </form>
+    </article>
+
+    <article>
+        <form>
+            전공: <input type="text" list="countries"><br>
+            <datalist id ="countries">
+                <option value="컴퓨터공학과"></option>
+                <option value="기타"></option>
+            </datalist><br><br>
+
+            의견: <br><br>
+            <textarea cols="40" rows="20">
+이곳에 의견을 남겨주세요
+            </textarea>
+    
+<input type="submit" value="제출">
+        </form>
+    </article>
+    </section>
+
+        <footer>
+        <p>Copyright 2023 by me</p>
+        </footer>
+</body>
+</html>

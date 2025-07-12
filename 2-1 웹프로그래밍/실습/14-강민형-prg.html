@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #container { width : 500px;
+                 height : 60px;
+              padding: 0px;}
+
+    .inB { width : 50px;
+          height : 50px;
+          display: inline-block;
+          float: left;
+          margin : 2px;    }
+   
+    #iColor {
+
+        width : 50px;
+        height : 50px;
+        border : 1px solid gray;
+        
+    }
+
+    #position {
+        width : 120px;
+        height : 50px;
+        border : 1px solid gray;
+        font-size: 10px;
+        text-align: center;
+        line-height : 50px;
+        
+    }
+ </style>
+
+ <script>
+  function decisionColor(colorDiv) {
+    let iColor = document.getElementById("iColor");
+    iColor.style.backgroundColor = colorDiv.style.backgroundColor;
+    let context1 = canvas.getContext("2d");
+    context1.strokeStyle = iColor.style.backgroundColor;
+  }
+   
+  function decisionP(colorInput) {
+    let iColor = document.getElementById("iColor");
+    iColor.style.backgroundColor = colorInput.value;
+    let context1 = canvas.getContext("2d");
+    context1.strokeStyle = iColor.style.backgroundColor;
+  }
+
+  function where(e) {
+  let position = document.getElementById("position");
+  let text = "x: " + e.offsetX + ", y: " + e.offsetY + "<br>";   
+  position.innerHTML = text;
+  }
+</script>
+ <meta charset="utf-8"><title>마우스드래깅으로캔버스에그림그리기</title></head>
+<body onload="init()">
+<h3>마우스를누른채드래깅하여그림그려보세요</h3>
+<hr>
+<div id="container">
+  <div class = "inB" id="div1"  style="background-color: blue" onclick ="decisionColor(this)"></div>
+  <div class = "inB" id="div2"  style="background-color: yellow" onclick ="decisionColor(this)"></div>
+  <div class = "inB" id="div3"  style="background-color: teal" onclick="decisionColor(this)"></div>
+  <div class = "inB" id="div4"  style="background-color: coral" onclick="decisionColor(this)"></div>
+  <input class = "inB" type="color" id="colorP" value="#00ff00" onchange="decisionP(this)">
+  <div class = "inB" id="iColor"></div>
+  <div class = "inB" id="position"></div>
+</div>
+  <br>
+<canvas id="myCanvas" style="background-color:aliceblue" width="400" height="300" onmousemove="where(event)">
+</canvas>
+<script>
+    let canvas, context;
+    let startX=0, startY=0; // 드래깅동안,처음마우스가눌러진좌표
+    let drawing = false;
+
+function init() {
+canvas = document.getElementById("myCanvas");
+context = canvas.getContext("2d");
+context.lineWidth= 2; // 선굵기2
+context.strokeStyle= "blue";
+canvas.addEventListener("mousemove", function (e) { move(e) }, false);
+canvas.addEventListener("mousedown", function (e) { down(e) }, false);
+canvas.addEventListener("mouseup", function (e) { up(e) }, false);
+canvas.addEventListener("mouseout", function (e) { out(e) }, false);
+}
+
+function down(e) { //마우스 클릭된 순간 그 클릭된 지점을 전역변수에 저장을 하고 이제부터 그리기 시작할 거다라며 drawing을 true로 지정
+    startX = e.offsetX;
+    startY = e.offsetY;
+    drawing = true;
+}
+
+function up(e) {
+    drawing = false;
+}
+
+function move(e) {
+if(!drawing) return; // 마우스가눌러지지않았으면리턴
+let curX= e.offsetX, curY= e.offsetY;
+draw(curX, curY);
+startX= curX; startY= curY;
+}
+
+function out(e) { drawing = false; }
+
+
+function draw(curX, curY) {
+context.beginPath();
+context.moveTo(startX, startY);
+context.lineTo(curX, curY);
+context.stroke();
+}
+
+</script>
+</body>
+</html>

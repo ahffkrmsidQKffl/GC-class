@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+<title>이벤트 흐름</title>
+</head>
+
+<body>
+    
+<div id="div0">
+
+<p style="color:blue" id="p">이것은
+<span style="color:red" id="span">문장입니다
+</span>
+</p>
+
+<form id="form">
+<input type="text" name="s">
+<input type="button" value="테스트" id="button"> <hr>
+</form>
+
+</div>
+
+<div id="div" style="color:green"></div>
+
+<script>
+let div0 = document.getElementById("div0");
+let div = document.getElementById("div");
+let p = document.getElementById("p");
+let span = document.getElementById("span");
+let form = document.getElementById("form");
+let button = document.getElementById("button");
+
+//타겟 객체에 캡쳐 리스너 등록
+form.addEventListener("click", capture, true); //form 캡쳐 단계
+button.addEventListener("click", capture, true);
+p.addEventListener("click", capture, true); //form 태그랑 sibling이라 나오지 않는다;
+span.addEventListener("click", capture, true);
+div0.addEventListener("click", capture, true);
+
+//타겟 객체에 버블 리스너 등록
+form.addEventListener("click", bubble, false); //form 버블 단계
+button.addEventListener("click", bubble, false);
+p.addEventListener("click", bubble, false); //form 태그랑 sibling이라 나오지 않는다;
+span.addEventListener("click", bubble, false);
+div0.addEventListener("click", bubble, false);
+
+// document.body.addEventListener("click", capture, true); 
+
+// document.body.addEventListener("click", bubble, false);
+
+function capture(e) { // e는 이벤트 객체
+let obj = e.currentTarget; // 현재 이벤트를 받은 DOM 객체
+let tagName = obj.tagName; // 태그 이름
+let objt = e.target.tagName;
+div.innerHTML += "<br>capture 단계 : " + tagName + " 태그 " + e.type + "이벤트" + ", 이벤트발생 태그 : ";
+}
+
+function bubble(e) { // e는 이벤트 객체
+let obj = e.currentTarget; // 현재 이벤트를 받은 DOM 객체
+let tagName = obj.tagName; // 태그 이름
+let objt = e.target.tagName;
+div.innerHTML += "<br>bubble 단계 : " + tagName + " 태그 " + e.type + "이벤트" + ", 이벤트발생 태그 : ";
+}
+</script>
+</body></html>

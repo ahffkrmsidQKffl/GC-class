@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>마우스드래깅으로캔버스에그림그리기</title></head>
+<body onload="init()">
+<h3>마우스를누른채드래깅하여그림그려보세요</h3>
+<hr>
+<canvas id="myCanvas" style="background-color:aliceblue" width="400" height="300">
+</canvas>
+<script>
+    let canvas, context;
+    let startX=0, startY=0; // 드래깅동안,처음마우스가눌러진좌표
+    let drawing = false;
+
+function init() {
+canvas = document.getElementById("myCanvas");
+context = canvas.getContext("2d");
+context.lineWidth= 2; // 선굵기2
+context.strokeStyle= "blue";
+canvas.addEventListener("mousemove", function (e) { move(e) }, false);
+canvas.addEventListener("mousedown", function (e) { down(e) }, false);
+canvas.addEventListener("mouseup", function (e) { up(e) }, false);
+canvas.addEventListener("mouseout", function (e) { out(e) }, false);
+}
+
+function down(e) { //마우스 클릭된 순간 그 클릭된 지점을 전역변수에 저장을 하고 이제부터 그리기 시작할 거다라며 drawing을 true로 지정
+    startX = e.offsetX;
+    startY = e.offsetY;
+    drawing = true;
+}
+
+function up(e) {
+    drawing = false;
+}
+
+function move(e) {
+if(!drawing) return; // 마우스가눌러지지않았으면리턴
+let curX= e.offsetX, curY= e.offsetY;
+draw(curX, curY);
+startX= curX; startY= curY;
+}
+
+function out(e) { drawing = false; }
+
+
+function draw(curX, curY) {
+context.beginPath();
+context.moveTo(startX, startY);
+context.lineTo(curX, curY);
+context.stroke();
+}
+
+</script>
+</body>
+</html>

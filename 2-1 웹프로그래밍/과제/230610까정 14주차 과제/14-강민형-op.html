@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>CHALLENGE</title></head>
+<body>
+<h3>학점 별로 학생 수를 입력하면 파이 차트로 비율 그리기</h3>
+<hr>
+A :&nbsp;<input type="number" value="0">명&nbsp;&nbsp;
+B :&nbsp;<input type="number" value="0">명&nbsp;&nbsp;
+C :&nbsp;<input type="number" value="0">명<br>
+D :&nbsp;<input type="number" value="0">명&nbsp;&nbsp;
+E :&nbsp;<input type="number" value="0">명
+<button onclick="draw()">차트 그리기</button>
+
+<canvas id="myCanvas" style="background-color:aliceblue" width="1000" height="1000"></canvas>
+<script>
+let inputArray = document.getElementsByTagName("input");
+let colors = ["blue", "green", "yellow", "magenta", "red"];
+let grads = ["A", "B", "C", "D", "F"];
+let canvas = document.getElementById("myCanvas");
+let context = canvas.getContext("2d");
+let n = 0;
+
+function draw() {
+    n = 0;
+    for (let i=0; i<inputArray.length; i++) {
+        n = parseInt(inputArray[i].value) + n;
+    }
+
+    let per = [0, 0, 0, 0, 0];
+    for (let i=0; i<inputArray.length; i++) {
+        per[i] = (parseInt(inputArray[i].value)/n)*100;
+    }
+
+    context.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (let i=0; i<inputArray.length; i++) {
+        context.font="20px gothic";
+        context.fillStyle="blue";
+        context.fillText(grads[i]+"학점 " + per[i] +"% : " + colors[i], 20, 20*i + 20);
+    }
+
+    let startAngle = 0;
+    for (let i=0; i<inputArray.length; i++) {
+        let endAngle = startAngle + (per[i]/100)*2*Math.PI;
+        context.beginPath();
+        context.fillStyle = colors[i];
+        context.moveTo(300, 300);
+        context.arc(300, 300, 150, startAngle, endAngle, false);
+        context.closePath();
+        context.fill();
+        startAngle = endAngle;      
+    }
+}
+</script>
+</body>
+</html>

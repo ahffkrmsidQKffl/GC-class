@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+<title>setTimeout()으로 웹 페이지 자동 연결</title>
+</head>
+<body>
+<h3>5초 후 경고창 띄움</h3>
+<hr>
+<button onclick="startTimer(1000)">타이머 동작</button>
+<button onclick="stopTimer()">타이머 해제</button>
+<p id="rp"> 로테이션 입니다 </p>
+
+<script>
+let st;
+
+ 
+function startTimer(t) {
+    st = setInterval("callTimer()", t) 
+}
+function stopTimer(t) {
+    clearInterval(st);
+}
+function callTimer() {
+//alert(t+"초가 지났습니다. "); 
+let p = document.getElementById("rp");
+let str = p.innerHTML;
+str.substr(0,1);
+p.innerHTML = str.substr(1, str.length-1) + str.substr(0,1)
+}
+</script>
+</body>
+</html> 
+
